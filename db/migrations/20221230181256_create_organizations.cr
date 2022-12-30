@@ -4,7 +4,7 @@ class CreateOrganizations::V20221230181256 < Avram::Migrator::Migration::V1
     create table_for(Organization) do
       primary_key id : Int64
       add_timestamps
-      add_belongs_to owner : User, on_delete: :cascade
+      add_belongs_to user : User, on_delete: :cascade
       add name : String
     end
   end
